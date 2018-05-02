@@ -9,9 +9,21 @@ import static com.mbarrera.FileHelper.getCasetas;
 public class Main {
 
     public static void main(String[] args) {
-
+        ManejadoraDataBase manejadoraDataBase = new ManejadoraDataBase();
         Caseta[] casetaList = FileHelper.getCasetas();
 
-        //TODO insertar en BD las casetas
+        System.out.println("INICIO DEL PROGRAMA");
+
+        for (Caseta c:
+             casetaList) {
+            manejadoraDataBase.insertarCaseta(c);
+        }
+
+
+
+        System.out.println("FIN DEL PROGRAMA");
+        manejadoraDataBase.closeConection();
+
+
     }
 }
