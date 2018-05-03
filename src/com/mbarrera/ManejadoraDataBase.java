@@ -44,7 +44,7 @@ public class ManejadoraDataBase {
 
 
     public void insertarCaseta(Caseta caseta){
-        String cadenaInsert = "INSERT INTO `Caseta` (`ID`, `CalleID`, `Titulo`,`Calle`, `Numero`, `Modulos`,`Clase`,`Entidad`) VALUES (NULL, '"+caseta.getId_Calle()+"', ? , '"+caseta.getCalle()+"', '"+caseta.getNumero()+"', '"+caseta.getModulos()+"', '"+caseta.getClase()+"', '"+caseta.getEntidad()+"');";
+        String cadenaInsert = "INSERT INTO `Caseta` (`ID`,`CasetaInfoID`, `CalleID`, `Titulo`,`Calle`, `Numero`, `Modulos`,`Clase`,`Entidad`) VALUES (NULL,'1', '"+caseta.getId_Calle()+"', ? , '"+caseta.getCalle()+"', '"+caseta.getNumero()+"', '"+caseta.getModulos()+"', '"+caseta.getClase()+"', '"+caseta.getEntidad()+"');";
         PreparedStatement cmd;
         try {
             //Class.forName(CLASS_NAME).newInstance();
